@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navigation {
+    font-family: var(--font1);
+    /* height: 74px; */
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    font-size: 20px;
+    display: flex;
+}
+
+.nav-left span {
+    font-size: 30px;
+    padding: 8px;
+}
+
+
+.nav-left ul {
+   display: flex;
+   align-items: center;
+   margin: 0 77px;
+   font-size: 18px;
+   padding-bottom: 23px;
+}
+
+.nav-left ul li {
+    list-style: none;
+    margin: 0px 14px;
+    font-family: var(--font2);
+}
+
+.nav-left ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+.nav-left ul li a:hover {
+    color: burlywood;
+    font-weight: bolder;
+}
+
+.content {
+    display: flex;
+    height: 100%;
+    /* background-color: rgb(211, 243, 243); */
+    margin-top: 35px;
+    margin-bottom: 50px;
+    padding: 20px;
+    position: relative;
+}
+
+.content::after {
+    content: "";
+    background-image: url(../img/19.jpg);
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    opacity: .35;
+}
+
+.content-left {
+    padding: 50px;
+    font-family: var(--font2);
+    /* width: 50%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+
+.content-left h1 {
+    font-family: var(--font3);
+} 
+
+.content-right {
+    /* width: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-right img {
+    height: 300px;
+    border: 3px solid black;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+/* .content-right img:hover {
+    transition: all .1s ease-in-out;
+} */
+
+.home-articles {
+    width: 80vw;
+    margin-right: 125px;
+    margin-top: 5px;
+    padding-top: 12px;
+    /* height: 455px; */
+    background-color: rgb(207, 219, 219, 0.4);
+    position: relative;
+}
+
+.year-box {
+    position: absolute;
+    /* background-color: bisque; */
+    top: 20px;
+    right: 0px;
+    width: 100px;
+    height: 100px;
+    font-size: 15px;
+}
+
+.year-box div {
+    margin: 8px 0px;
+}
+
+.home-article {
+    display: flex;
+    padding: 25px;
+    padding-left: 50px;
+}
+
+.home-articles h2 {
+    padding-left: 20px;
+    font-size: 30px;
+}
+
+.home-article img {
+   width: 250px;
+   height: 200px;
+}
+
+.home-article-content {
+    align-self: center;
+    padding: 25px;
+}
+
+.home-article-content a {
+    text-decoration: none;
+    color: var(--main-bg-color);
+}
+
+.home-article h2 {
+    font-family: 'Rubik Bubbles', cursive;
+}
+
+
+/* .home-articles {} */
+.footer {
+    height: 50px;
+    background-color:var(--main-bg-color);
+    color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+
+.footer a {
+    color: white;
+}

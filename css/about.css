@@ -1,0 +1,18 @@
+.home-articles h2 {
+    margin-top: 0px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 50px;
+    padding-top: 50px;
+}
+
+.home-articles p {
+    font-size: 25px;
+    padding: 30px 60px;
+    font-family: var(--font2);
+}
+
+.home-articles {
+    margin-top: 24px;
+}

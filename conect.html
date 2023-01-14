@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Scorpio Blogs</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        background: grey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form {
+        background: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        padding: 2vw 4vw;
+        width: 90%;
+        max-width: 600px;
+        border-radius: 10px;
+    }
+
+    form h3 {
+        font-size: 40px;
+        color: black;
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
+
+    form input,
+    form textarea {
+        border: 2px solid rgb(78, 74, 74);
+        margin: 5px 0;
+        padding: 10px;
+        outline: none;
+        background: white;
+        font-size: 20px;
+    }
+
+    form button {
+        padding: 10px 2px;
+        background: red;
+        color: aliceblue;
+        font-size: 20px;
+        border: 0;
+        border-radius: 20px;
+        outline: none;
+        cursor: pointer;
+        width: 200px;
+        margin: 20px auto 0;
+    }
+</style>
+
+<body>
+
+    <section>
+    <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>
+                Scorpio Blogs
+            </h3>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Email Id" required>
+            <input type="text" id="phone" placeholder="Phone No" required>
+            <textarea id="message" cols="30" rows="10" placeholder="How can we Help you?"></textarea>
+            <button type="submit">Submit Now</button>
+        </form>
+    </div>
+</section>
+
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+
+                // enter your Email
+                Username: "username",    
+
+                // enter your e-mail Password
+                Password: "password",
+
+                // again enter your e-mail here 
+                To: 'them@website.com',
+                From: document.getElementById("email").value,
+                Subject: "New Contact Form Enquiry",
+                Body: "Name: " + document.getElementById("name").value
+                 + "<br> Email:" + document.getElementById("email").value  
+                 + "<br> Phone no:" + document.getElementById("phone").value 
+                 + "<br> Message:" + document.getElementById("message").value
+            }).then(
+                message => alert("Message sent SuccesFully")
+            );
+        }
+    </script>
+</body>
+
+</html>
